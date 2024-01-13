@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body{
+    background:white ;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+}
+header{
+    background-color: white;
+    /* background-image: linear-gradient(to right, #1C2833, #345677); */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 111;
+    box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
+}
+header ul{
+    display: flex;
+    width:50%;
+    height: 100%;
+    justify-content: space-evenly;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center;
+    
+}
+header li:hover .dropdown-content{
+    display: block;
+    cursor: pointer;
+    scroll-behavior: smooth;
+}
+header li{
+    /* color: #1C2833; */
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    background-image: linear-gradient(to right, #1C2833, #345677);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+header li img{
+    width: 30px;
+    height: 30px;
+}
+header img{
+    width: 50px;
+    height: 50%;
+    border-radius: 50%;
+    background-repeat: repeat-x;
+    background-size: cover;
+    box-shadow: inset 0 0 20px rgba(0,0,0,1);
+    animation: animateEarth 15s linear infinite ;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-image: linear-gradient(to left, #1C2833, #345677);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: monospace;
+    text-align: center;
+  }
+  .dropdown-content a:hover{
+    background-image: linear-gradient(to right, #1C2833, #345677);
+    /* border-radius: 15px; */
+  }
+  
+section{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 100vh;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    z-index: 50;
+}
+.earth{
+    position: absolute;
+    top:70%;
+    left: 0;
+    transform: translate(-50%,-50%);
+    width:1000px;
+    height: 1000px;
+    background-image: url('assets/Images/Globe.jpg');
+    border-radius: 50%;
+    background-repeat: repeat-x;
+    background-size: cover;
+    box-shadow: inset 0 0 50px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,1);
+    animation: animateEarth 15s linear infinite ;
+    z-index: 101;
+    
+
+}
+@keyframes animateEarth{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 750px 0;
+    }
+}
+section .text{
+    width: 50%;;
+    /* font-weight: bold; */
+    /* color:#1C2833; */
+    position: absolute;
+    right: 50px;
+    font-family: monospace;
+    font-size: 100px;
+    background-image: linear-gradient(to right, #1C2833, #345677);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    
+}
+.sec{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+    /* flex-direction: row; */
+}
+.news{
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width:70%;
+    min-height: 70vh;
+    margin:10px ;
+    z-index: 40;
+    /* border: 2px solid; */
+    padding: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.news h2{
+    padding-bottom: 15px;
+    /* color:#1C2833; */
+    align-self: center;
+    background-image: linear-gradient(to right, #1C2833, #345677);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.news img{
+    width:100%;
+    height: 40%;
+    padding-bottom:15px ;
+    box-shadow: inset 0 3px 10px rgb(0 0 0 / 0.5);
+}
+.news a{
+    width:30%;
+    height: 40px;
+    /* background-color:#2692F5; */
+    align-self: center;
+    color:white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    /* background-image: linear-gradient(to left, #1C2833, #345677); */
+    background-image: radial-gradient(ellipse,#345677 , #1C2833);
+    /* color: transparent; */
+    /* background-clip: text;
+    -webkit-background-clip: text; */
+}
+.news a span{
+    color:#4ba2f9;
+}
+.news a:hover{
+    background-image: radial-gradient(ellipse,#1C2833 ,#345677 );
+}
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-image: radial-gradient(ellipse,#1C2833 ,#345677 );/* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  #myBtn:hover {
+    background-image: radial-gradient(ellipse,#345677 , #1C2833);/* Add a dark-grey background on hover */
+  }
